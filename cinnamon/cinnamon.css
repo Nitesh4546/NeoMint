@@ -437,26 +437,25 @@ StScrollBar {
     background-gradient-start: rgba(0, 255, 0, 0.05);
     background-gradient-end: rgba(0, 255, 0, 0.2); }
 
-.panel-top,.panel-bottom, .panel-left, .panel-right {
+.panel-top, .panel-left, .panel-right {
   color: #ffffff;
   border: none;
-  background-color: rgba(26, 26, 26, 0.6);
   font-size: 1em;
-  padding: 0px; }
-  .panel-bottom{
+  padding: 0px; 
+  /*glass effect*/
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);         
+  -webkit-backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px;
+}
+.panel-bottom{
+    color: #ffffff;
+    border: none;
+    font-size: 1em;
+    padding: 0px; 
     background-color: rgba(0,0,0,0);
-  }
-/* .panel-top { */
-  /* box-shadow: 0 1px #222222; */
- /* } */
-.panel-top {
-  /*box-shadow: 0 1px #222222; */
-  background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
-  backdrop-filter: blur(10px);         /* the glass blur effect */
-  -webkit-backdrop-filter: blur(10px); /* for Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* optional light border */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* optional shadow for depth */
-  border-radius: 12px;   
 }
 
 .panel-bottom {
