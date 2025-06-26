@@ -1953,7 +1953,12 @@ StScrollBar {
   border-radius: 20px;
   font-weight: bold;
   spacing: 12px;
-  padding: 12px 24px; }
+  padding: 12px 24px; 
+  border-color: rgba(0,0,0,0);
+  
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(10px);         
+  -webkit-backdrop-filter: blur(10px);  }
   .media-keys-osd > * {
     spacing: 12px; }
   .media-keys-osd StIcon {
