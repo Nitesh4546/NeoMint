@@ -857,17 +857,31 @@ StScrollBar {
 
 /*NOTIFICATION*/
 #notification {
-  box-shadow: 0 1px 15px 4px #303030;
-  border-top-color: #d91a1a;
-  border-top: 4px;
-  border-radius: 10px;
-  background-color: rgba(34,34,34,0.88);
-  padding: 13px;
-  spacing-rows: 10px;
-  spacing-columns: 10px;
-  margin-from-right-edge-of-screen: 20px;
   width: 34em;
-  color: #e1e1e1; }
+  padding: 16px;
+  margin-from-right-edge-of-screen: 20px;
+  color: #ffffff;
+  font-size: 15px;
+ 
+  /* deeper glass look */
+  background: rgba(25, 25, 25, 0.3); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(12, 12, 12, 0.6);
+  background-gradient-end: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  border-top: 4px solid #d91a1a; /* red stripe for critical notifications */
+  border-radius: 14px;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  spacing-rows: 12px;
+  spacing-columns: 10px;
+}
   .popup-menu #notification {
     color: #e1e1e1;
     border-image: url("dark-assets/misc/message.svg") 9 9 9 9; }
@@ -877,7 +891,12 @@ StScrollBar {
     padding-bottom: 13px;
     color: #e1e1e1; }
   #notification-scrollview {
-    max-height: 10em; }
+    max-height: 14em;
+    padding: 5px;
+    background-color: rgba(25,25,25,0.2);
+    border: 0.1px solid rgba(25, 25, 25, 0.3);
+    border-radius: 10px;
+  }
     #notification-scrollview > .top-shadow, #notification-scrollview > .bottom-shadow {
       height: 1em; }
     #notification-scrollview:ltr > StScrollBar {
