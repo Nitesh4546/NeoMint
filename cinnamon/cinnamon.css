@@ -860,13 +860,16 @@ StScrollBar {
   width: 34em;
   padding: 16px;
   margin-from-right-edge-of-screen: 20px;
+
   color: #ffffff;
   font-size: 15px;
- 
+
+
   /* deeper glass look */
   background: rgba(25, 25, 25, 0.3); 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  
   background-gradient-direction: vertical;
   background-gradient-start: rgba(12, 12, 12, 0.6);
   background-gradient-end: rgba(255, 255, 255, 0.3);
@@ -882,41 +885,55 @@ StScrollBar {
   spacing-rows: 12px;
   spacing-columns: 10px;
 }
-  .popup-menu #notification {
-    color: #e1e1e1;
-    border-image: url("dark-assets/misc/message.svg") 9 9 9 9; }
-    .popup-menu #notification .notification-button, .popup-menu #notification .notification-icon-button {
-      padding: 5px; }
-  #notification.multi-line-notification {
-    padding-bottom: 13px;
-    color: #e1e1e1; }
-  #notification-scrollview {
-    max-height: 14em;
-    padding: 5px;
-    background-color: rgba(25,25,25,0.2);
-    border: 0.1px solid rgba(25, 25, 25, 0.3);
-    border-radius: 10px;
-  }
-    #notification-scrollview > .top-shadow, #notification-scrollview > .bottom-shadow {
-      height: 1em; }
-    #notification-scrollview:ltr > StScrollBar {
-      padding-left: 6px; }
-    #notification-scrollview:rtl > StScrollBar {
-      padding-right: 6px; }
-  #notification-body {
-    spacing: 5px; }
-  #notification-actions {
-    spacing: 10px; }
 
+.popup-menu #notification {
+  color: #ffffff;
+  border-image: none;
+}
+
+#notification.multi-line-notification {
+  padding-bottom: 13px;
+}
+
+/*notification container(containing notification contents)*/
+#notification-scrollview {
+  max-height: 14em;
+  padding: 5px;
+  background-color: rgba(25,25,25,0.2);
+  border: 0.1px solid rgba(25, 25, 25, 0.3);
+  border-radius: 10px;
+}
+
+#notification-body {
+  spacing: 6px;
+}
+
+#notification-actions {
+  spacing: 10px;
+}
+
+/* Image-type notification */
 .notification-with-image {
   min-height: 159px;
-  color: #e1e1e1; }
+  color: #ffffff;
+}
 
-.notification-button, .notification-icon-button {
-  padding: 5px; }
+/* Notification buttons */
+.notification-button,
+.notification-icon-button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s;
+}
+.notification-button:hover,
+.notification-icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 .notification-icon-button > StIcon {
-  icon-size: 32px; }
+  icon-size: 32px;
+}
 /*-------------------------------------------------------------------------------------------*/
 
 
